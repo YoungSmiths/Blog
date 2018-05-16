@@ -1,6 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-将删除 .gitignore
-将删除 .idea/
-将删除 YoungSmiths.github.io.iml
-/YoungSmiths.github.io.iml
+
+/YoungSmiths.github.io.master.iml
 /.idea/
