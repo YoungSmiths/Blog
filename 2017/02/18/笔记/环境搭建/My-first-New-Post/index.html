@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="参考:leancloud去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta name="description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo个人博客初步搭成">
 <meta property="og:url" content="http://blog.youngsmith.com/2017/02/18/笔记/环境搭建/My-first-New-Post/index.html">
 <meta property="og:site_name" content="Young.Smith's Blog">
-<meta property="og:description" content="参考:leancloud去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
-<meta property="og:updated_time" content="2018-05-17T13:08:10.864Z">
+<meta property="og:description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta property="og:updated_time" content="2018-05-17T13:46:39.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo个人博客初步搭成">
-<meta name="twitter:description" content="参考:leancloud去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta name="twitter:description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
 
 
 
@@ -356,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  559
+                  569
                 </span>
               
 
@@ -393,7 +393,7 @@
       
 
       
-        <p>参考:<a href="https://www.jianshu.com/p/76ce3729746d" target="_blank" rel="external"></a><br><a href="https://leancloud.cn/dashboard/applist.html#/apps" target="_blank" rel="external">leancloud</a><br>去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： <a href="http://blog.oulafen.com/" target="_blank" rel="external">一位前端妹子</a>。<br><a id="more"></a></p>
+        <p>参考:<a href="https://www.jianshu.com/p/76ce3729746d" target="_blank" rel="external">hexo搭建较好的博客</a><br><a href="https://leancloud.cn/dashboard/applist.html#/apps" target="_blank" rel="external">leancloud</a><br><a href="http://tc9011.com/tags/Hexo/" target="_blank" rel="external">博主</a><br>去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： <a href="http://blog.oulafen.com/" target="_blank" rel="external">一位前端妹子</a>。<br><a id="more"></a></p>
 <h3 id="对hexo的理解"><a href="#对hexo的理解" class="headerlink" title="对hexo的理解"></a>对hexo的理解</h3><p>搭建的过程中确实遇到了不少问题，虽然网上有不少优秀的博客作指导，但是由于对hexo搭建博客原理的理解不够，导致搭建的整个过程都很折腾。<br>总结一下，hexo是基于node.js的一个静态博客的平台，所以我们首先要安装node.js，然后在通过node.js 安装hexo的Module。之后，就是hexo的一些基本操作，生成静态网页，这里我们可以通过本地部署查看效果。如果本地没有什么问题的话，接下来就是将本地的静态网页部署到GitHub上了。注意：是将hexo生成的静态网页部署在与GitHub账号同名的仓库的master分支中，hexo本身的文件可以放在另一个分支，也可以放在另一个仓库。</p>
 <h3 id="一路走来遇到的坑"><a href="#一路走来遇到的坑" class="headerlink" title="一路走来遇到的坑"></a>一路走来遇到的坑</h3><h4 id="问题1：如果不了解，不怎么了解-node-js-，使用node-js安装Module的时候遇到的问题会不知所以然。"><a href="#问题1：如果不了解，不怎么了解-node-js-，使用node-js安装Module的时候遇到的问题会不知所以然。" class="headerlink" title="问题1：如果不了解，不怎么了解 node.js ，使用node.js安装Module的时候遇到的问题会不知所以然。"></a>问题1：如果不了解，不怎么了解 node.js ，使用node.js安装Module的时候遇到的问题会不知所以然。</h4><h4 id="问题2：hexo安装成功，并且正确运行，但是localhost-4000不能访问。"><a href="#问题2：hexo安装成功，并且正确运行，但是localhost-4000不能访问。" class="headerlink" title="问题2：hexo安装成功，并且正确运行，但是localhost:4000不能访问。"></a>问题2：hexo安装成功，并且正确运行，但是localhost:4000不能访问。</h4><p>启动hexo s 的时候，用这个命令，换一个端口。</p>
 <h3 id="问题3：ssh的连通性测试出现问题"><a href="#问题3：ssh的连通性测试出现问题" class="headerlink" title="问题3：ssh的连通性测试出现问题"></a>问题3：ssh的连通性测试出现问题</h3><p>这里，我刚开始用的是GitHub，然后根据网上的各种博客，看得我有点凌乱，安装git和GitHub的处理情况好像有点一样。</p>
