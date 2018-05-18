@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
 
 
   
@@ -13,6 +17,13 @@
 <meta name="theme-color" content="#222">
 
 
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -79,16 +90,16 @@
 
 
 
-<meta name="description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta name="description" content="去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo个人博客初步搭成">
 <meta property="og:url" content="http://blog.youngsmith.com/2017/02/18/笔记/环境搭建/My-first-New-Post/index.html">
 <meta property="og:site_name" content="Young.Smith's Blog">
-<meta property="og:description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
-<meta property="og:updated_time" content="2018-05-17T13:46:47.384Z">
+<meta property="og:description" content="去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta property="og:updated_time" content="2018-05-18T14:39:32.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo个人博客初步搭成">
-<meta name="twitter:description" content="参考:hexo搭建较好的博客leancloud博主去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
+<meta name="twitter:description" content="去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： 一位前端妹子。">
 
 
 
@@ -98,7 +109,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -117,8 +128,6 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://blog.youngsmith.com/2017/02/18/笔记/环境搭建/My-first-New-Post/"/>
 
 
 
@@ -199,6 +208,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -209,20 +228,64 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
             
-            归档
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -349,6 +412,8 @@
             <div class="post-wordcount">
               
                 
+                  <span class="post-meta-divider">|</span>
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -356,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  569
+                  249
                 </span>
               
 
@@ -372,7 +437,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -393,13 +458,28 @@
       
 
       
-        <p>参考:<a href="https://www.jianshu.com/p/76ce3729746d" target="_blank" rel="external">hexo搭建较好的博客</a><br><a href="https://leancloud.cn/dashboard/applist.html#/apps" target="_blank" rel="external">leancloud</a><br><a href="http://tc9011.com/tags/Hexo/" target="_blank" rel="external">博主</a><br>去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。哦，我那位同学主页： <a href="http://blog.oulafen.com/" target="_blank" rel="external">一位前端妹子</a>。<br><a id="more"></a></p>
-<h3 id="对hexo的理解"><a href="#对hexo的理解" class="headerlink" title="对hexo的理解"></a>对hexo的理解</h3><p>搭建的过程中确实遇到了不少问题，虽然网上有不少优秀的博客作指导，但是由于对hexo搭建博客原理的理解不够，导致搭建的整个过程都很折腾。<br>总结一下，hexo是基于node.js的一个静态博客的平台，所以我们首先要安装node.js，然后在通过node.js 安装hexo的Module。之后，就是hexo的一些基本操作，生成静态网页，这里我们可以通过本地部署查看效果。如果本地没有什么问题的话，接下来就是将本地的静态网页部署到GitHub上了。注意：是将hexo生成的静态网页部署在与GitHub账号同名的仓库的master分支中，hexo本身的文件可以放在另一个分支，也可以放在另一个仓库。</p>
-<h3 id="一路走来遇到的坑"><a href="#一路走来遇到的坑" class="headerlink" title="一路走来遇到的坑"></a>一路走来遇到的坑</h3><h4 id="问题1：如果不了解，不怎么了解-node-js-，使用node-js安装Module的时候遇到的问题会不知所以然。"><a href="#问题1：如果不了解，不怎么了解-node-js-，使用node-js安装Module的时候遇到的问题会不知所以然。" class="headerlink" title="问题1：如果不了解，不怎么了解 node.js ，使用node.js安装Module的时候遇到的问题会不知所以然。"></a>问题1：如果不了解，不怎么了解 node.js ，使用node.js安装Module的时候遇到的问题会不知所以然。</h4><h4 id="问题2：hexo安装成功，并且正确运行，但是localhost-4000不能访问。"><a href="#问题2：hexo安装成功，并且正确运行，但是localhost-4000不能访问。" class="headerlink" title="问题2：hexo安装成功，并且正确运行，但是localhost:4000不能访问。"></a>问题2：hexo安装成功，并且正确运行，但是localhost:4000不能访问。</h4><p>启动hexo s 的时候，用这个命令，换一个端口。</p>
-<h3 id="问题3：ssh的连通性测试出现问题"><a href="#问题3：ssh的连通性测试出现问题" class="headerlink" title="问题3：ssh的连通性测试出现问题"></a>问题3：ssh的连通性测试出现问题</h3><p>这里，我刚开始用的是GitHub，然后根据网上的各种博客，看得我有点凌乱，安装git和GitHub的处理情况好像有点一样。</p>
-<h3 id="哦，还有部署到GitHub上master和分支的处理问题"><a href="#哦，还有部署到GitHub上master和分支的处理问题" class="headerlink" title="哦，还有部署到GitHub上master和分支的处理问题"></a>哦，还有部署到GitHub上master和分支的处理问题</h3><p><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="external">这篇博客有点帮助</a></p>
-<h2 id="折腾过程中，查阅的博客中比较好的几篇"><a href="#折腾过程中，查阅的博客中比较好的几篇" class="headerlink" title="折腾过程中，查阅的博客中比较好的几篇"></a>折腾过程中，查阅的博客中比较好的几篇</h2><p><a href="http://baixin.io/2016/06/HEXO_Advanced/" target="_blank" rel="external">HEXO进阶</a><br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">中文教程</a><br><a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" target="_blank" rel="external">Config.yml 的配置</a><br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
-<h3 id="比较喜欢的主题，还没有配置上，日后有空再换"><a href="#比较喜欢的主题，还没有配置上，日后有空再换" class="headerlink" title="比较喜欢的主题，还没有配置上，日后有空再换"></a>比较喜欢的主题，还没有配置上，日后有空再换</h3><p><a href="https://github.com/tufu9441/maupassant-hexo/" target="_blank" rel="external">Maupassant</a><br><a href="https://www.haomwei.com/" target="_blank" rel="external">例子</a></p>
+        <p>去年在一个偶然的情况下发现同学QQ的主页竟然有点不同，画风如此简洁，于是就调研了一下，原来是自己在GitHub上部署的一个静态博客，但是基于时间问题和严重的拖延症就拖到了现在。折腾了一段时间，终于有点小成果了。<br>哦，我那位同学主页： <a href="http://blog.oulafen.com/" target="_blank" rel="external">一位前端妹子</a>。<br><a id="more"></a></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>hexo new “postName” #新建文章</li>
+<li>hexo new page “pageName” #新建页面</li>
+<li>hexo generate #生成静态页面至public目录</li>
+<li>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</li>
+<li>hexo deploy #将.deploy目录部署到GitHub</li>
+<li>hexo help  # 查看帮助</li>
+<li>hexo version  #查看Hexo的版本</li>
+</ul>
+<h2 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo <span class="keyword">new</span></div><div class="line">hexo g == hexo <span class="keyword">generate</span></div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div><div class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</div></pre></td></tr></table></figure>
+<p>参考博客:</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/76ce3729746d" target="_blank" rel="external">hexo搭建较好的博客</a></li>
+<li><a href="https://leancloud.cn/dashboard/applist.html#/apps" target="_blank" rel="external">leancloud</a></li>
+<li><a href="https://www.zhihu.com/question/21193762" target="_blank" rel="external">这篇博客有点帮助</a></li>
+<li><a href="http://tc9011.com/tags/Hexo/" target="_blank" rel="external">博主</a></li>
+<li><a href="http://baixin.io/2016/06/HEXO_Advanced/" target="_blank" rel="external">HEXO进阶</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">中文教程</a></li>
+<li><a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" target="_blank" rel="external">Config.yml 的配置</a></li>
+<li><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></li>
+</ul>
 
       
     </div>
@@ -409,6 +489,35 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Young.Smith 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Young.Smith 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -474,6 +583,9 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+  
 
 
 
@@ -490,6 +602,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -558,6 +672,34 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/YoungSmiths" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:young_smith@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://gitee.com/YoungSmith" target="_blank" title="GitLib">
+                      
+                        <i class="fa fa-fw fa-GitLib"></i>GitLib</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/u011009161" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-CSDN"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -566,6 +708,9 @@
           
 
           
+<div id="music163player" >
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=29932451&auto=1&height=66"></iframe>
+</div>
 
         </div>
       </section>
@@ -580,7 +725,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对hexo的理解"><span class="nav-number">1.</span> <span class="nav-text">对hexo的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一路走来遇到的坑"><span class="nav-number">2.</span> <span class="nav-text">一路走来遇到的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题1：如果不了解，不怎么了解-node-js-，使用node-js安装Module的时候遇到的问题会不知所以然。"><span class="nav-number">2.1.</span> <span class="nav-text">问题1：如果不了解，不怎么了解 node.js ，使用node.js安装Module的时候遇到的问题会不知所以然。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题2：hexo安装成功，并且正确运行，但是localhost-4000不能访问。"><span class="nav-number">2.2.</span> <span class="nav-text">问题2：hexo安装成功，并且正确运行，但是localhost:4000不能访问。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3：ssh的连通性测试出现问题"><span class="nav-number">3.</span> <span class="nav-text">问题3：ssh的连通性测试出现问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哦，还有部署到GitHub上master和分支的处理问题"><span class="nav-number">4.</span> <span class="nav-text">哦，还有部署到GitHub上master和分支的处理问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#折腾过程中，查阅的博客中比较好的几篇"><span class="nav-number"></span> <span class="nav-text">折腾过程中，查阅的博客中比较好的几篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#比较喜欢的主题，还没有配置上，日后有空再换"><span class="nav-number">1.</span> <span class="nav-text">比较喜欢的主题，还没有配置上，日后有空再换</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简写"><span class="nav-number">2.</span> <span class="nav-text">简写</span></a></li></ol></div>
             
 
           </div>
@@ -604,17 +749,8 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Young.Smith</span>
+  <span class="author" itemprop="copyrightHolder">版权声明：本文为博主原创文章，未经博主-撒忆雨(YoungSmith)允许不得转载。</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">3.7k</span>
   
 </div>
 
@@ -648,6 +784,8 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -673,6 +811,8 @@
 
   
 
+
+  
 
 
 
@@ -712,6 +852,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -774,6 +919,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -898,6 +1360,9 @@
   
 
   
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
 
   
 
