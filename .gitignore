@@ -1,3 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
+<<<<<<< HEAD
 /.idea/
 /YoungSmiths.github.io.dev.iml
+=======
+
+/YoungSmiths.github.io.master.iml
+/.idea/
+>>>>>>> 3b9eb4098b14b2ce411d3a8c340db07cd6fe2965
