@@ -98,7 +98,7 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/YoungSmiths/YoungSmiths.github.io.git
-  branch: master
+  branch: dev
   message:
 
 # Generate categories from directory-tree
