@@ -32,7 +32,8 @@ permalink_defaults:
 #资源文件夹，放在里面的文件会上传到github中
 source_dir: source
 #公共文件夹，存放生成的静态文件
-public_dir: ..//YoungSmiths.github.io.master
+public_dir: public
+## ..//YoungSmiths.github.io.master
 #标签文件夹，默认是tags。实际存放在source/tags中。
 tag_dir: tags
 #rss_dir: rss
